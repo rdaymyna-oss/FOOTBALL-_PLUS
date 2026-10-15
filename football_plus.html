@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101512">
+<title>فوتبال پلاس</title>
+<style>
+:root{--bg:#0b100d;--panel:#151d18;--panel2:#1b2820;--green:#b7ff38;--muted:#9aa99f;--white:#f5f8f5;--line:#26342b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 90% 0%,#203426 0,transparent 30%),var(--bg);color:var(--white);font-family:Tahoma,"Arial",sans-serif;padding-bottom:84px}
+header{padding:22px 18px 12px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:#0b100deF;backdrop-filter:blur(12px);z-index:5;border-bottom:1px solid #1c2920}
+.brand{display:flex;gap:10px;align-items:center}.logo{width:43px;height:43px;border-radius:14px;background:var(--green);color:#101710;display:grid;place-items:center;font-size:23px;font-weight:bold;box-shadow:0 0 25px #b7ff3825}.brand h1{font-size:19px;margin:0}.brand small{display:block;color:var(--muted);font-size:10px;margin-top:4px;letter-spacing:1px}
+.iconbtn{background:var(--panel);border:1px solid var(--line);color:white;border-radius:13px;padding:10px 12px;font-size:18px}
+main{padding:15px 15px 0;max-width:760px;margin:auto}.welcome{display:flex;justify-content:space-between;align-items:end;margin:10px 2px 15px}.welcome h2{font-size:23px;margin:0 0 6px}.welcome p{margin:0;color:var(--muted);font-size:12px}.pill{color:var(--green);background:#b7ff3815;border:1px solid #b7ff383b;border-radius:20px;padding:7px 10px;font-size:11px}
+.search{display:flex;gap:8px;margin:14px 0 20px}.search input{min-width:0;flex:1;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;color:white;font:inherit;outline:none}.search input:focus{border-color:var(--green)}.search button,.primary{border:0;background:var(--green);color:#11180f;font-weight:bold;border-radius:13px;padding:0 16px;font:inherit}
+.sectionhead{display:flex;align-items:center;justify-content:space-between;margin:22px 2px 12px}.sectionhead h3{margin:0;font-size:16px}.sectionhead button{background:none;border:0;color:var(--green);font:inherit;font-size:12px}
+.hero{background:linear-gradient(125deg,#263e2a,#142219 55%,#101712);border:1px solid #38513b;border-radius:22px;padding:18px;position:relative;overflow:hidden}.hero:after{content:"⚽";position:absolute;font-size:120px;opacity:.08;left:3px;bottom:-28px;transform:rotate(-20deg)}.hero .eyebrow{color:var(--green);font-size:11px}.hero h2{font-size:22px;line-height:1.6;margin:10px 0 6px;max-width:290px}.hero p{font-size:12px;color:#c0cec3;line-height:1.9;max-width:280px}.hero button{padding:11px 14px;border-radius:12px;margin-top:4px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:14px;min-width:0}.mini .emoji{font-size:24px}.mini h4{margin:9px 0 5px;font-size:14px}.mini p{margin:0;color:var(--muted);font-size:11px;line-height:1.8}
+.match{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:15px;margin-bottom:9px}.matchtop{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin-bottom:15px}.live{color:#ff6e6e}.teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;text-align:center;gap:8px}.teamname{font-size:12px}.crest{font-size:27px;display:block;margin-bottom:6px}.score{font-size:21px;font-weight:bold;direction:ltr}.note{font-size:10px;color:var(--muted);text-align:center;margin-top:10px}
+.list{display:grid;gap:9px}.teamrow{display:flex;align-items:center;gap:12px;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:15px}.teamcrest{width:43px;height:43px;border-radius:14px;background:var(--panel2);display:grid;place-items:center;font-size:22px;flex-shrink:0}.teamrow .info{flex:1;min-width:0}.teamrow h4{margin:0 0 5px;font-size:14px}.teamrow p{margin:0;color:var(--muted);font-size:11px}.star{background:none;border:0;color:#87948a;font-size:22px;padding:5px}.star.active{color:var(--green)}
+.video{display:flex;gap:12px;background:var(--panel);border:1px solid var(--line);padding:10px;border-radius:16px;margin-bottom:9px}.thumb{width:100px;min-height:78px;border-radius:12px;background:linear-gradient(135deg,#314c34,#111a13);display:grid;place-items:center;font-size:29px;flex-shrink:0}.video h4{font-size:13px;margin:5px 0 7px}.video p{font-size:10px;color:var(--muted);line-height:1.7;margin:0}.video button{margin-top:7px;border:1px solid #344738;color:var(--green);background:#b7ff3810;border-radius:9px;padding:6px 10px}
+.table{width:100%;border-collapse:collapse;background:var(--panel);border-radius:14px;overflow:hidden;font-size:12px}.table th,.table td{padding:12px 8px;text-align:center;border-bottom:1px solid var(--line)}.table th{color:var(--muted);font-weight:normal}.table td:first-child,.table th:first-child{text-align:right}.hidden{display:none!important}.empty{padding:25px;text-align:center;color:var(--muted);background:var(--panel);border-radius:16px;line-height:2}
+nav{position:fixed;bottom:0;left:0;right:0;z-index:10;background:#101712f2;backdrop-filter:blur(16px);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:9px 4px calc(9px + env(safe-area-inset-bottom))}nav button{background:none;border:0;color:#91a096;font:inherit;font-size:10px;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:54px}nav button span{font-size:20px}nav button.active{color:var(--green)}
+.toast{position:fixed;bottom:90px;left:15px;right:15px;margin:auto;max-width:400px;text-align:center;padding:12px;background:#26372b;border:1px solid #49664c;border-radius:12px;z-index:20;display:none;font-size:12px}
+footer{text-align:center;color:#65746a;font-size:10px;padding:25px 15px;line-height:2}
+@media(min-width:600px){.cards{grid-template-columns:repeat(4,1fr)}.hero h2{max-width:420px}.hero p{max-width:420px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand"><div class="logo">⚽</div><div><h1>فوتبال پلاس</h1><small>FOOTBALL PLUS</small></div></div>
+ <button class="iconbtn" aria-label="اعلان‌ها" onclick="toast('بخش اعلان‌ها در نسخه نمایشی آماده‌سازی شده است 🔔')">♧</button>
+</header>
+<main>
+<section id="home" class="page">
+ <div class="welcome"><div><h2>دنیای فوتبال، یک‌جا! ⚽</h2><p>خبرها، تیم‌ها و لحظه‌های فراموش‌نشدنی</p></div><span class="pill">نسخه نمایشی</span></div>
+ <div class="search"><input id="searchInput" placeholder="جست‌وجوی تیم یا باشگاه..." oninput="searchTeams()"><button onclick="searchTeams()">جست‌وجو</button></div>
+ <div class="hero"><span class="eyebrow">بیشتر از یک بازی</span><h2>فوتبال را جور دیگری تجربه کن</h2><p>تیم محبوبت را پیدا کن، تاریخچه باشگاه‌ها را بخوان و بهترین لحظه‌های فوتبال را کشف کن.</p><button class="primary" onclick="showPage('teams')">کشف تیم‌ها ←</button></div>
+ <div class="sectionhead"><h3>دسترسی سریع</h3></div>
+ <div class="cards">
+  <div class="mini" onclick="showPage('matches')"><div class="emoji">🔴</div><h4>مسابقات</h4><p>نمونه صفحه نتایج و برنامه بازی‌ها</p></div>
+  <div class="mini" onclick="showPage('videos')"><div class="emoji">🎬</div><h4>بهترین گل‌ها</h4><p>لحظه‌های ماندگار تاریخ فوتبال</p></div>
+  <div class="mini" onclick="showPage('teams')"><div class="emoji">🌍</div><h4>دانشنامه تیم‌ها</h4><p>تاریخچه و اطلاعات باشگاه‌ها</p></div>
+  <div class="mini" onclick="showPage('leagues')"><div class="emoji">🏆</div><h4>لیگ‌ها</h4><p>جدول نمونه و رقابت‌ها</p></div>
+ </div>
+ <div class="sectionhead"><h3>مسابقات منتخب</h3><button onclick="showPage('matches')">همه مسابقات ←</button></div>
+ <div class="match"><div class="matchtop"><span>لیگ قهرمانان اروپا · نمونه</span><span class="live">● نمایشی</span></div><div class="teams"><div><span class="crest">⚪</span><span class="teamname">رئال مادرید</span></div><div class="score">۲ - ۱</div><div><span class="crest">🔴</span><span class="teamname">بایرن مونیخ</span></div></div><div class="note">این نتیجه ساختگی است و فقط برای نمایش طراحی شده.</div></div>
+ <div class="sectionhead"><h3>باشگاه‌های محبوب</h3><button onclick="showPage('teams')">دانشنامه ←</button></div>
+ <div class="list" id="homeTeams"></div>
+</section>
+<section id="matches" class="page hidden">
+ <div class="welcome"><div><h2>مسابقات ⚽</h2><p>نتایج و برنامه مسابقات</p></div></div>
+ <div class="pill" style="display:inline-block;margin-bottom:12px">اطلاعیه: اطلاعات این نسخه زنده نیست</div>
+ <div class="match"><div class="matchtop"><span>لیگ قهرمانان اروپا · نمونه</span><span>پایان بازی</span></div><div class="teams"><div><span class="crest">⚪</span><span class="teamname">رئال مادرید</span></div><div class="score">۲ - ۱</div><div><span class="crest">🔴</span><span class="teamname">بایرن مونیخ</span></div></div><div class="note">نتیجه نمونه؛ برای نتیجه واقعی باید API مسابقات متصل شود.</div></div>
+ <div class="match"><div class="matchtop"><span>لیگ برتر ایران · نمونه</span><span>برنامه آینده</span></div><div class="teams"><div><span class="crest">🔴</span><span class="teamname">پرسپولیس</span></div><div class="score">— : —</div><div><span class="crest">🔵</span><span class="teamname">استقلال</span></div></div><div class="note">زمان مسابقه در این نمونه وارد نشده است.</div></div>
+ <div class="empty">در نسخه کامل، این صفحه به منبع معتبر نتایج زنده وصل می‌شود.</div>
+</section>
+<section id="videos" class="page hidden">
+ <div class="welcome"><div><h2>سینمای فوتبال 🎬</h2><p>گل‌های تماشایی و لحظه‌های تاریخی</p></div></div>
+ <div class="hero" style="margin-bottom:14px"><span class="eyebrow">لحظه‌های ماندگار</span><h2>بهترین گل‌های تاریخ فوتبال</h2><p>این بخش برای ویدیوهای رسمی یا دارای مجوز طراحی شده است.</p></div>
+ <div class="video"><div class="thumb">▶️</div><div><h4>گل قیچی‌برگردان کریستیانو رونالدو</h4><p>رئال مادرید · لحظه تاریخی لیگ قهرمانان</p><button onclick="openVideo('https://www.youtube.com/results?search_query=official+Cristiano+Ronaldo+bicycle+kick+Real+Madrid')">جست‌وجوی ویدیوی رسمی</button></div></div>
+ <div class="video"><div class="thumb">▶️</div><div><h4>گل تاریخی زین‌الدین زیدان</h4><p>فینال لیگ قهرمانان ۲۰۰۲</p><button onclick="openVideo('https://www.youtube.com/results?search_query=UEFA+official+Zidane+2002+final+goal')">جست‌وجوی ویدیوی رسمی</button></div></div>
+ <div class="video"><div class="thumb">▶️</div><div><h4>گل‌های برتر جام جهانی</h4><p>لحظه‌های فراموش‌نشدنی فوتبال ملی</p><button onclick="openVideo('https://www.youtube.com/results?search_query=FIFA+official+best+World+Cup+goals')">جست‌وجوی ویدیوی رسمی</button></div></div>
+ <div class="video"><div class="thumb">▶️</div><div><h4>بهترین ضربات آزاد</h4><p>ضربه‌های ایستگاهی تماشایی</p><button onclick="openVideo('https://www.youtube.com/results?search_query=official+best+free+kick+goals+football')">جست‌وجوی ویدیوی رسمی</button></div></div>
+ <p style="font-size:11px;color:var(--muted);line-height:2">این نسخه ویدیوها را میزبانی نمی‌کند؛ دکمه‌ها جست‌وجوی ویدیو را در یوتیوب باز می‌کنند. برای انتشار عمومی، حقوق پخش باید رعایت شود.</p>
+</section>
+<section id="teams" class="page hidden">
+ <div class="welcome"><div><h2>دانشنامه تیم‌ها 🌍</h2><p>تاریخچه باشگاه‌های فوتبال جهان</p></div></div>
+ <div class="search"><input id="teamSearch" placeholder="نام تیم را وارد کن..." oninput="renderTeams()"><button onclick="renderTeams()">بگرد</button></div>
+ <div class="list" id="teamList"></div>
+ <div id="teamDetail" class="match hidden"></div>
+</section>
+<section id="leagues" class="page hidden">
+ <div class="welcome"><div><h2>لیگ‌ها و جام‌ها 🏆</h2><p>جدول نمونه برای نمایش رابط کاربری</p></div></div>
+ <div class="sectionhead"><h3>جدول نمونه لیگ</h3><span class="pill">داده ساختگی</span></div>
+ <table class="table"><thead><tr><th>تیم</th><th>بازی</th><th>امتیاز</th></tr></thead><tbody><tr><td>۱. رئال مادرید</td><td>۱۰</td><td>۲۵</td></tr><tr><td>۲. بارسلونا</td><td>۱۰</td><td>۲۳</td></tr><tr><td>۳. لیورپول</td><td>۱۰</td><td>۲۱</td></tr><tr><td>۴. بایرن مونیخ</td><td>۱۰</td><td>۱۹</td></tr></tbody></table>
+ <p style="color:var(--muted);font-size:11px;line-height:2">جدول بالا واقعی و به‌روز نیست. در نسخه کامل، جدول هر لیگ باید از منبع داده معتبر دریافت شود.</p>
+</section>
+<section id="profile" class="page hidden">
+ <div class="welcome"><div><h2>پروفایل من 👤</h2><p>تنظیمات و تیم‌های موردعلاقه</p></div></div>
+ <div class="mini"><h4>⭐ تیم‌های ذخیره‌شده</h4><p>با زدن ستاره کنار هر باشگاه، آن را به علاقه‌مندی‌ها اضافه کن. انتخاب‌ها روی همین دستگاه ذخیره می‌شوند.</p></div>
+ <div class="sectionhead"><h3>علاقه‌مندی‌ها</h3></div><div id="favorites" class="list"></div>
+ <div class="sectionhead"><h3>درباره فوتبال پلاس</h3></div><div class="mini"><p>نسخه اولیه نمایشی فوتبال پلاس · فارسی و راست‌چین · مناسب صفحه موبایل</p></div>
+</section>
+<footer>فوتبال پلاس · نسخه اولیه نمایشی<br>نتایج و جدول‌ها در این نسخه آزمایشی‌اند و هنوز به سرویس زنده متصل نیستند.</footer>
+</main>
+<nav>
+ <button class="active" data-page="home" onclick="showPage('home',this)"><span>⌂</span>خانه</button>
+ <button data-page="matches" onclick="showPage('matches',this)"><span>⚽</span>مسابقات</button>
+ <button data-page="videos" onclick="showPage('videos',this)"><span>▶</span>ویدیوها</button>
+ <button data-page="leagues" onclick="showPage('leagues',this)"><span>🏆</span>لیگ‌ها</button>
+ <button data-page="teams" onclick="showPage('teams',this)"><span>🌍</span>تیم‌ها</button>
+ <button data-page="profile" onclick="showPage('profile',this)"><span>👤</span>من</button>
+</nav>
+<div class="toast" id="toast"></div>
+<script>
+const teams=[
+{name:'رئال مادرید',emoji:'⚪',country:'اسپانیا',founded:'۱۹۰۲',stadium:'سانتیاگو برنابئو',about:'باشگاه پرافتخار شهر مادرید که با تاریخچه‌ای طولانی در فوتبال اسپانیا و اروپا شناخته می‌شود.'},
+{name:'بارسلونا',emoji:'🔵🔴',country:'اسپانیا',founded:'۱۸۹۹',stadium:'اسپاتیفای کمپ نو',about:'باشگاه شهر بارسلونا با هویت فوتبالی ویژه و آکادمی مشهور لاماسیا.'},
+{name:'منچستریونایتد',emoji:'🔴',country:'انگلستان',founded:'۱۸۷۸',stadium:'اولدترافورد',about:'یکی از شناخته‌شده‌ترین باشگاه‌های فوتبال انگلستان، مستقر در منچستر.'},
+{name:'لیورپول',emoji:'🔴',country:'انگلستان',founded:'۱۸۹۲',stadium:'آنفیلد',about:'باشگاه تاریخی شهر لیورپول با هواداران پرشور و سنت فوتبالی غنی.'},
+{name:'بایرن مونیخ',emoji:'🔴⚪',country:'آلمان',founded:'۱۹۰۰',stadium:'آلیانتس آرنا',about:'باشگاه مطرح شهر مونیخ و از قدرت‌های اصلی فوتبال آلمان.'},
+{name:'پاری سن ژرمن',emoji:'🔵',country:'فرانسه',founded:'۱۹۷۰',stadium:'پارک دو پرنس',about:'باشگاه شهر پاریس که در فوتبال فرانسه و رقابت‌های اروپایی حضور دارد.'},
+{name:'اینتر',emoji:'⚫🔵',country:'ایتالیا',founded:'۱۹۰۸',stadium:'سن‌سیرو',about:'باشگاه بزرگ شهر میلان با تاریخچه‌ای مهم در فوتبال ایتالیا.'},
+{name:'پرسپولیس',emoji:'🔴',country:'ایران',founded:'۱۹۶۳',stadium:'ورزشگاه آزادی',about:'یکی از باشگاه‌های پرهوادار فوتبال ایران، مستقر در تهران.'},
+{name:'استقلال',emoji:'🔵',country:'ایران',founded:'۱۹۴۵',stadium:'ورزشگاه آزادی',about:'باشگاه باسابقه فوتبال ایران با هواداران گسترده در سراسر کشور.'},
+{name:'آرسنال',emoji:'🔴⚪',country:'انگلستان',founded:'۱۸۸۶',stadium:'امارات',about:'باشگاه شمال لندن با سابقه طولانی در لیگ برتر انگلستان.'}
+];
+let favs=JSON.parse(localStorage.getItem('fp_favs')||'[]');
+function teamHTML(t){let on=favs.includes(t.name);return `<div class="teamrow"><div class="teamcrest">${t.emoji}</div><div class="info" onclick="detailTeam('${t.name}')" style="cursor:pointer"><h4>${t.name}</h4><p>${t.country} · تأسیس ${t.founded}</p></div><button class="star ${on?'active':''}" onclick="toggleFav('${t.name}')" aria-label="علاقه‌مندی">${on?'★':'☆'}</button></div>`}
+function renderTeams(){let q=(document.getElementById('teamSearch')?.value||document.getElementById('searchInput')?.value||'').trim().toLowerCase();let found=teams.filter(t=>(t.name+' '+t.country).toLowerCase().includes(q));document.getElementById('teamList').innerHTML=found.length?found.map(teamHTML).join(''):'<div class="empty">تیمی پیدا نشد.</div>'}
+function renderHomeTeams(){document.getElementById('homeTeams').innerHTML=teams.slice(0,3).map(teamHTML).join('')}
+function detailTeam(name){const t=teams.find(x=>x.name===name);if(!t)return;const d=document.getElementById('teamDetail');d.classList.remove('hidden');d.innerHTML=`<button onclick="document.getElementById('teamDetail').classList.add('hidden')" style="float:left;background:none;color:var(--muted);border:0">بستن ×</button><div style="font-size:30px">${t.emoji}</div><h2>${t.name}</h2><p style="line-height:2;color:var(--muted)">${t.about}</p><p>🌍 کشور: ${t.country}</p><p>📅 سال تأسیس: ${t.founded}</p><p>🏟️ ورزشگاه: ${t.stadium}</p><p style="font-size:11px;color:var(--muted)">این اطلاعات پایه برای نمونه اولیه است؛ اطلاعات مربیان، بازیکنان و افتخارات باید به‌روزرسانی و تکمیل شوند.</p>`;d.scrollIntoView({behavior:'smooth',block:'start'})}
+function toggleFav(name){favs=favs.includes(name)?favs.filter(x=>x!==name):[...favs,name];localStorage.setItem('fp_favs',JSON.stringify(favs));renderTeams();renderHomeTeams();renderFavs();toast(favs.includes(name)?'به علاقه‌مندی‌ها اضافه شد ⭐':'از علاقه‌مندی‌ها حذف شد')}
+function renderFavs(){let f=teams.filter(t=>favs.includes(t.name));document.getElementById('favorites').innerHTML=f.length?f.map(teamHTML).join(''):'<div class="empty">هنوز تیمی ذخیره نکردی. از بخش تیم‌ها روی ستاره بزن.</div>'}
+function showPage(id,btn){document.querySelectorAll('.page').forEach(p=>p.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='teams')renderTeams();if(id==='profile')renderFavs();window.scrollTo({top:0,behavior:'smooth'})}
+function searchTeams(){showPage('teams');let q=document.getElementById('searchInput').value;document.getElementById('teamSearch').value=q;renderTeams()}
+function toast(msg){let t=document.getElementById('toast');t.textContent=msg;t.style.display='block';clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.style.display='none',2600)}
+function openVideo(url){window.open(url,'_blank','noopener')}
+renderHomeTeams();renderTeams();renderFavs();
+</script>
+</body></html>
